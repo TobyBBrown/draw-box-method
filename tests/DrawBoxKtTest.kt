@@ -5,12 +5,25 @@ import org.junit.jupiter.api.Assertions.*
 internal class DrawBoxKtTest {
 
     @Test
-    fun drawBox() {
+    fun drawBoxSquare() {
         val expected = "\u250c  -  -  \u2510" +
                 "\n\u2502        \u2502" +
                 "\n\u2502        \u2502" +
                 "\n\u2514  -  -  \u2518\n"
         assertEquals(expected, drawBox(4, 4))
+    }
+
+    @Test
+    fun drawBoxVertRectangle() {
+        val expected = "\u250c  -  -  \u2510" +
+                "\n\u2502        \u2502" +
+                "\n\u2502        \u2502" +
+                "\n\u2502        \u2502" +
+                "\n\u2502        \u2502" +
+                "\n\u2502        \u2502" +
+                "\n\u2502        \u2502" +
+                "\n\u2514  -  -  \u2518\n"
+        assertEquals(expected, drawBox(4, 8))
     }
 
 }
