@@ -12,6 +12,11 @@ fun drawBox(width: Int, height: Int): String {
                 else -> middleRows
             }
         }
-    }
+    } else
+        throw IllegalArgumentException("A box must have at least width 2 and height 2.")
     return box
+}
+
+fun main(args: Array<String>) {
+    print(drawBox(4, 4))
 }

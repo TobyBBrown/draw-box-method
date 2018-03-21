@@ -37,26 +37,23 @@ internal class DrawBoxKtTest {
 
     @Test
     fun drawBoxZero() {
-        val expected = ""
-        assertEquals(expected, drawBox(0, 0))
-        assertEquals(expected, drawBox(5, 0))
-        assertEquals(expected, drawBox(0, 5))
+        assertThrows(IllegalArgumentException::class.java, {drawBox(0, 0)})
+        assertThrows(IllegalArgumentException::class.java, {drawBox(5, 0)})
+        assertThrows(IllegalArgumentException::class.java, {drawBox(0, 5)})
     }
 
     @Test
     fun drawBoxLine() {
-        val expected = ""
-        assertEquals(expected, drawBox(1, 1))
-        assertEquals(expected, drawBox(5, 1))
-        assertEquals(expected, drawBox(1, 5))
+        assertThrows(IllegalArgumentException::class.java, {drawBox(1, 1)})
+        assertThrows(IllegalArgumentException::class.java, {drawBox(5, 1)})
+        assertThrows(IllegalArgumentException::class.java, {drawBox(1, 5)})
     }
 
     @Test
     fun drawBoxNegative() {
-        val expected = ""
-        assertEquals(expected, drawBox(1, 1))
-        assertEquals(expected, drawBox(5, 1))
-        assertEquals(expected, drawBox(1, 5))
+        assertThrows(IllegalArgumentException::class.java, {drawBox(1, 1)})
+        assertThrows(IllegalArgumentException::class.java, {drawBox(5, 1)})
+        assertThrows(IllegalArgumentException::class.java, {drawBox(1, 5)})
     }
 
 }
