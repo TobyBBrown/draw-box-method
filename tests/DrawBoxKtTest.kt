@@ -35,4 +35,12 @@ internal class DrawBoxKtTest {
         assertEquals(expected, drawBox(8, 4))
     }
 
+    @Test
+    fun drawBoxZero() {
+        val expected = ""
+        assertEquals(expected, drawBox(0, 0))
+        assertEquals(expected, drawBox(5, 0))
+        assertEquals(expected, drawBox(0, 5))
+    }
+
 }
